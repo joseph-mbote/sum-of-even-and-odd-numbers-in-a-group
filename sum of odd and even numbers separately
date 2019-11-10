@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package javaprogramming;
+
+/**
+ * @author Joseph Mbote
+ *
+ */
+public class Oddevensum {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int lowerbound=1, upperbound=100;
+		int sumodd=0;
+		int sumeven=0;
+		int absDiff;
+		int number= lowerbound;
+		while(number<= upperbound) {
+			if(number%2==0) {
+				sumeven+= number;
+			}
+			else {
+				sumodd+= number;
+			}
+			++number;
+			}
+		if(sumodd>sumeven) {
+			absDiff= sumodd-sumeven;
+		}else {
+			absDiff=sumeven-sumodd;
+		}
+		System.out.println("The sum of odd numbers from"+lowerbound+"to"+upperbound+"is"+sumodd);
+		System.out.println("The sum of even numbers from"+lowerbound+"to"+upperbound+"is"+sumeven);
+		System.out.println("The absolute difference between the two sums is"+absDiff);
+		}
+	}
+
+
